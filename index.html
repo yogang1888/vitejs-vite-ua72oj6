@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewpoint"
+      content="width=device-width,initail-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover"
+    />
+    <title>LIFF - LINE Front-end Framework</title>
+  </head>
+  <body>
+    <script
+      charset="utf-8"
+      src="https://static.line-scdn.net/liff/edge/versions/2.3.1/sdk.js"
+    ></script>
+    <script>
+      async function main() {
+        await liff.init({ liffId: '1657346075-oPNO0g0L' });
+        await liff.shareTargetPicker([
+          {
+            type: 'flex',
+            altText: 'Flex Message',
+            contents: {
+              type: 'bubble',
+              header: {
+                type: 'box',
+                layout: 'vertical',
+                contents: [
+                  {
+                    type: 'box',
+                    layout: 'vertical',
+                    contents: [
+                      {
+                        type: 'text',
+                        text: 'แจกเครดิตฟรี',
+                        size: 'xxl',
+                        weight: 'bold',
+                        align: 'center',
+                        color: '#FFFFFF',
+                      },
+                    ],
+                    cornerRadius: 'xxl',
+                    borderWidth: 'normal',
+                    borderColor: '#000000',
+                    backgroundColor: '#000000',
+                  },
+                ],
+                backgroundColor: '#FF6600',
+              },
+              hero: {
+                type: 'image',
+                url: 'https://img5.pic.in.th/file/secure-sv1/26222f637646420d975066869be70852.jpeg',
+                size: 'full',
+              },
+              body: {
+                type: 'box',
+                layout: 'vertical',
+                contents: [
+                  {
+                    type: 'text',
+                    text: '✅รับเครดิตฟรีทันที 50',
+                    color: '#FFFFFF',
+                  },
+                  {
+                    type: 'text',
+                    text: '✅ทำยอด 300 ถอนได้ 300',
+                    color: '#FFFFFF',
+                  },
+                ],
+              },
+              footer: {
+                type: 'box',
+                layout: 'vertical',
+                contents: [
+                  {
+                    type: 'button',
+                    action: {
+                      type: 'uri',
+                      label: 'รับเครดิตฟรี',
+                      uri: 'http://linecorp.com/',
+                    },
+                    style: 'primary',
+                    offsetBottom: 'md',
+                    color: '#FF6600',
+                  },
+                  {
+                    type: 'button',
+                    action: {
+                      type: 'uri',
+                      label: 'สมัครสมาชิก',
+                      uri: 'http://linecorp.com/',
+                    },
+                    style: 'primary',
+                    offsetEnd: 'none',
+                    offsetTop: 'none',
+                    offsetBottom: 'none',
+                    color: '#FF6600',
+                  },
+                ],
+                backgroundColor: '#000000',
+              },
+              styles: {
+                body: {
+                  backgroundColor: '#000000',
+                },
+              },
+            },
+          },
+        ]);
+        liff.closeWindow();
+      }
+      main();
+    </script>
+  </body>
+</html>
